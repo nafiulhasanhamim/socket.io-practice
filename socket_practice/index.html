@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myTime"></h1>
+    <h1 id="customEvent"></h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+
+        //server theke .send use kora hoise jeta client 
+        //theke 'message' event er maddhome receive kora hoise
+        // socket.on('message',(msg)=> {
+        //     document.write(msg)
+        // })
+
+        // socket.on('message',(msg)=> {
+        //     document.getElementById('myTime').innerHTML = ""
+        //     document.getElementById('myTime').innerHTML = msg
+        // })
+        
+        //serverside e 'myEvent' naamer ekta custom event
+        //create kora hoise ja client e access kora hoise
+        // socket.on('myEvent',(msg)=> {
+        //     document.getElementById('customEvent').innerHTML = msg
+        // })
+        
+    //   sending data from client to server using .send method
+    //    socket.send("Data is sent from client to server through .send method")
+
+    //sending data from client to server using custom event
+    // socket.emit("customEvent","Data is sent from client to server through custom method")
+
+
+    //broadcasting data is received
+    // socket.on('myBroadcast',(msg)=> {
+    //     document.write(msg)
+    // })
+    
+    // access buy namespace
+    // socket = io("/buy")
+    // socket.on('myEvent',(msg)=> {
+    //     document.getElementById('customEvent').innerHTML = msg
+            
+    // })
+
+    // // access sell namespace
+    // socket = io("/sell")
+    // socket.on('myEvent',(msg)=> {
+    //     document.getElementById('customEvent').innerHTML = msg
+            
+    // })
+
+    </script>
+</body>
+</html>
